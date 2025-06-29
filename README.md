@@ -1,2 +1,2 @@
 # ColSeg-Microscope
-A color segmentation program for digital microscopes
+A real-time image processing and analysis program for microscopic imaging with CNR and SNR metrics.
