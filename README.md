@@ -5,14 +5,15 @@ A Python-based digital microscopes image analysis tool with real-time color segm
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
 - [License](#license)
 
-## Installation and Use
-1. Download the zip file in release
-2. Run ColSeg.exe
-3. Drag the image for Target ROI and Background ROI (If there's a problem or you wish to cancel, you can click space)
+## Installation
+Download the zip file in release
+
+# Usage
+1. Run ColSeg.exe
+2. Drag the image for Target ROI and Background ROI (If there's a problem or you wish to cancel, you can click space)
+3. Drag the sliders to manipulate filter
 
 ## Features
 - Real-time camera feed display
