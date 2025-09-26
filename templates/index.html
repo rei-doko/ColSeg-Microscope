@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/jpg" href="static/icon.ico"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="static/style.css">
+        <title>Color Segmentation Program</title>
+    </head>
+
+    <body> 
+        <!-- Raw Camera --> 
+        <div class="visual-wrapper" raw-camera>
+            <span>Raw Camera Output</span>
+            <br>
+            <img src="{{ url_for('camera') }}" width = "95%"/>
+        </div>
+
+        <!-- Filtered Camera -->
+        <div class="visual-wrapper" filtered-camera>
+            <span>Filtered Camera Output</span>
+            <br>
+            <img src="{{ url_for('f_camera') }}" width = "95%"/>
+         </div>
+
+        <!-- Range Slider -->
+
+        <!-- Numerical Value -->
+        <div class="value-box">
+            <header>
+                <h1>Range Slider</h1>
+                <p>Drag the slider to select a range of wavelength (nm) values (Max Gap: 10nm)</p>
+                <p><span class="highlight">NOTE</span>: Below 380nm is UV and is automatically filtered</p>
+            </header>
+
+            <!-- Value Inputs -->
+            <div class="value-input">
+                <div class="input-wrapper">
+                    <span>Min</span> <!-- Minimum -->
+                    <input type="number" id="min-input" name="min_val" class="min-input" min="0" max="1200" value="615" oninput="captureValues()">
+                </div>
+
+                <div class="separator"> - </div>
+
+                <div class="input-wrapper">
+                    <span>Max</span> <!-- Maximum -->
+                    <input type="number" id="max-input" name="max_val" class="max-input" min="0" max="1200" value="1200" oninput="captureValues()">
+                </div>
+            </div>
+
+            <!-- Value Sliders -->
+            <div class="slider">
+                <div class="progress"></div>
+            </div>
+            <div class="range-input">
+                <input type="range" class="min-range" min="0" max="1200" value="615" step="1">
+                <input type="range" class="max-range" min="0" max="1200" value="1200" step="1">
+            </div>
+        </div>
+        <script src="static/script.js"></script>
+    </body> 
+
+</html>
